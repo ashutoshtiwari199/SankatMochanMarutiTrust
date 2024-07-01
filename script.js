@@ -119,3 +119,24 @@ document.addEventListener('DOMContentLoaded', function () {
         // Handle error here, like displaying an error message
     });
 }
+
+
+// path/to/your/script.js
+
+document.addEventListener('DOMContentLoaded', function () {
+  const welcomeContainer = document.getElementById('welcomeContainer');
+  const closeButton = document.getElementById('closeButton');
+
+  // Show the welcome container
+  welcomeContainer.classList.remove('hidden');
+
+  // Close the welcome container after 10 seconds
+  // setTimeout(() => {
+  //     welcomeContainer.classList.add('hidden');
+  // }, 10000);
+
+  // Add an event listener to the close button
+  closeButton.addEventListener('click', function () {
+      welcomeContainer.classList.add('hidden');
+  });
+});
