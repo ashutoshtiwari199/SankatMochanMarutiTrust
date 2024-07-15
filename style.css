@@ -43,3 +43,13 @@
 html {
   scroll-behavior: smooth;
 }
+
+.flyer{
+  position: absolute;
+  top: 20%;
+  left: 50%;
+  background-color: #784b4b;
+  height: 20vh;
+  width: 70vw;
+  transform: translate(-50%, -50%);
+}
