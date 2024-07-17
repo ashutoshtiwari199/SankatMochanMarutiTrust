@@ -53,3 +53,33 @@ html {
   width: 70vw;
   transform: translate(-50%, -50%);
 }
+
+.message {
+  display: none;
+  font-style: italic;
+  /* animation: slideRight 60s ease-in-out infinite; */
+}
+
+@keyframes slideRight {
+  0% {
+    /* transform: translateX(0%); */
+    left: 100%;
+  }
+  25% {
+    left: -25%;
+    
+  }
+  50% {
+    left: -50%;
+    
+  }
+  75% {
+    left: -75%;
+  }
+
+  100% {
+    /* transform: translateX(110); */
+    left: -100%;
+    /* opacity: 1; */
+  }
+}

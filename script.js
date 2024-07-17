@@ -140,3 +140,23 @@ document.addEventListener('DOMContentLoaded', function () {
       welcomeContainer.classList.add('hidden');
   });
 });
+
+document.addEventListener('DOMContentLoaded', function() {
+  document.querySelector('.message').style.display = 'block';
+});
+
+setTimeout(function() {
+  document.querySelector('.message').style.display = 'none';
+}, 120 * 1000);
+
+function updateVisitCount() {
+  let count = localStorage.getItem('visitCount');
+  count = count ? parseInt(count) + 1 : 1;
+  localStorage.setItem('visitCount', count);
+  document.getElementById('visitCount').textContent = `Visitors: ${count}`;
+}
+
+// Update visit count on page load
+document.addEventListener('DOMContentLoaded', function() {
+  updateVisitCount();
+});
