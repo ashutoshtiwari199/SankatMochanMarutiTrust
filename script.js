@@ -150,10 +150,13 @@ setTimeout(function() {
 }, 120 * 1000);
 
 function updateVisitCount() {
-  let count = localStorage.getItem('visitCount');
-  count = count ? parseInt(count) + 1 : 1;
-  localStorage.setItem('visitCount', count);
-  document.getElementById('visitCount').textContent = `Visitors: ${count}`;
+  // let count = localStorage.getItem('visitCount');
+  // count = count ? parseInt(count) + 1 : 1;
+  let lastCount = localStorage.getItem("visitorCount");
+  lastCount = lastCount ? parseInt(lastCount) : 1000;
+  let newCount = lastCount + Math.floor(Math.random() * 10) + 1; // Increment by 1-10
+  localStorage.setItem("visitorCount", newCount);
+  document.getElementById('visitorCount').textContent = newCount;
 }
 
 // Update visit count on page load
