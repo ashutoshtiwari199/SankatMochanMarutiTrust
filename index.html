@@ -1,598 +1,748 @@
 <!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Sankat Mochan Vikaiyya Trust</title>
-    <script src="https://cdn.tailwindcss.com"></script>
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
-      integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
-      crossorigin="anonymous"
-      referrerpolicy="no-referrer"
-    />
-    <script>
-      tailwind.config = {
-        theme: {
-          extend: {
-            colors: {
-              clifford: "#da373d",
-            },
-          },
-        },
-      };
-    </script>
-    <script>
-      tailwind.config = {
-        theme: {
-          screens: {
-            sm: "480px",
-            md: "768px",
-            lg: "976px",
-            xl: "1440px",
-          },
-          extend: {
-            colors: {
-              black: "#000000",
-              mygrey: "#758283",
-              primarycolor: "#00BAF2",
-              darkblue: "#002970",
-              hovercardcolor: "#068cb4c9",
-              hovercarddarkblue: "#0745afaf",
-            },
-          },
-        },
-      };
-    </script>
-    <style type="text/tailwindcss">
-      @layer utilities {
-        .content-auto {
-          content-visibility: auto;
-        }
-      }
-    </style>
-    <link rel="stylesheet" href="style.css" />
-  </head>
+<html lang="hi">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>संकट मोचन मारुति ट्रस्ट – विकैया धाम</title>
+  <meta name="description" content="संकट मोचन मारुति ट्रस्ट – विकैया धाम हनुमान मंदिर एवं शिव मंदिर, चक श्री दत्त, उत्तर प्रदेश" />
 
-  <body class="bg-orange-100">
-    <!-- <div id="welcomeContainer" class="absolute z-50 hidden flyer">
-    <img id="welcomeImage" src="./assets/Invite.jpeg" alt="Welcome Image" class="w-full h-auto">
-    <button id="closeButton" class="absolute top-0 right-0 p-2 bg-gray-800 text-white">&times;</button>
-  </div> -->
+  <!-- Google Fonts – preconnect for performance -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Noto+Sans+Devanagari:wght@400;500;700&family=Poppins:wght@400;500;600;700&display=swap"
+    rel="stylesheet"
+  />
 
-    <!-- <nav class="flex w-full h-8 bg-sky-500/[.16] px-12 justify-between items-center	">
-    <ul class="flex justify-between w-full sm:w-1/6">
-      <li class="cursor-pointer">बिहार सरकार</li>
-      <li class="cursor-pointer ml-6">BIHAR GOVT</li>
-    </ul>
-    <ul class="w-1/3 justify-between hidden md:flex">
-      <li class="cursor-pointer">Skip to main content</li>
-      <li><i class="fa-solid cursor-pointer fa-magnifying-glass"></i></li>
-      <li><i class="fa-brands cursor-pointer fa-rocketchat"></i></li>
-      <li><i class="fa-brands cursor-pointer fa-facebook"></i></li>
-      <li><i class="fa-brands cursor-pointer fa-twitter"></i></li>
-    </ul>
-  </nav> -->
+  <!-- Critical inline CSS – above-fold only -->
+  <style>
+    body { margin: 0; background: #fdf6ec; }
+    .site-header { position: sticky; top: 0; z-index: 1000; background: rgba(253,246,236,0.92); backdrop-filter: blur(12px); border-bottom: 1px solid rgba(232,93,4,0.15); }
+    .header-inner { max-width: 1200px; margin: 0 auto; padding: 0.75rem 1.5rem; display: flex; align-items: center; gap: 1rem; }
+    .logo { width: 64px; height: 64px; object-fit: contain; }
+    .hero { padding: 0; position: relative; height: 90vh; min-height: 400px; overflow: hidden; }
+    .carousel { position: relative; height: 100%; }
+    .carousel-track { display: flex; height: 100%; transition: transform 0.6s cubic-bezier(0.4,0,0.2,1); }
+    .carousel-slide { min-width: 100%; height: 100%; position: relative; flex-shrink: 0; }
+    .carousel-slide img { width: 100%; height: 100%; object-fit: cover; object-position: center; }
+  </style>
 
-    <nav
-      class="flex justify-center sm:justify-between h-32 p-4 sm:pl-12 bg-orange-200"
-    >
-      <img class="" src="./assets/Hanumanji_logo.png" alt="" />
-      <div
-        class="flex w-full md:block sm:w-1/6 justify-center sm:justify-around md:flex-row items-center"
-      >
-        <ul class="ml-6 flex flex-col items-center justify-normal pt-8 text-lg">
-          <li
-            class="text-1xl font-bold tracking-wider"
-            style="font-size: 1.3rem"
-          >
-            संकट मोचन मारुति ट्रस्ट
-          </li>
-          <!-- <li class="text-1xl">Chak Shree Datt</li> -->
-          <li class="text-xs font-mono">Reg.- UP25447353716079V</li>
-        </ul>
+  <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+
+  <!-- ====== HEADER ====== -->
+  <header class="site-header" id="site-header">
+    <div class="header-inner">
+      <img
+        src="./assets/Hanumanji_logo.png"
+        alt="संकट मोचन मारुति ट्रस्ट लोगो"
+        class="logo"
+        width="64"
+        height="64"
+        loading="eager"
+      />
+      <div class="trust-name">
+        <span class="trust-name-hindi">संकट मोचन मारुति ट्रस्ट</span>
+        <span class="trust-reg">Reg.- UP25447353716079V</span>
       </div>
-    </nav>
 
-    <!-- <nav class="flex justify-between  h-32 p-4 sm:pl-12">
-    <div class="flex w-full sm:w-1/6 justify-between sm:justify-around md:flex-row items-center">
-      <ul class="ml-6 flex flex-col items-center justify-normal pt-8">
-        <li >संकट मोचन मारुति ट्रस्ट</li>
-        <li>Sankat Mochan Maruti Trust</li>
-      </ul>
+      <!-- Desktop nav -->
+      <nav class="main-nav" id="main-nav" aria-label="मुख्य नेविगेशन">
+        <a href="#home">Home</a>
+        <a href="#temples">Temples</a>
+        <a href="#tour">360° Tour</a>
+        <a href="#members">Members</a>
+        <a href="#about">About</a>
+        <a href="#donate">Donate</a>
+        <a href="#contact">Contact</a>
+      </nav>
+
+      <!-- Hamburger (mobile) -->
+      <button class="hamburger" id="hamburger" aria-label="मेनू खोलें" aria-expanded="false">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
     </div>
-    <img class="hidden md:block" src="./assets/ShivaTemple.png" alt="">
-  </nav> -->
+  </header>
 
-    <nav
-      class="bg-orange-300 text-white py-2 h-10 px-4 sm:px-20 container-fluid flex justify-between items-center overflow-y-hidden"
-    >
-      <ul
-        id="menu-items"
-        class="ease-in-out duration-900 absolute sm:relative bottom-20 z-10 sm:bottom-0 right-[100%] w-[100vw] top-0 sm:right-[0] bg-slate-200 sm:bg-transparent bg-opacity-75 backdrop-blur flex sm:flex flex-col sm:flex-row h-full w-full sm:h-[5vh] sm:text-zinc-200 text-zinc-700 justify-around sm:justify-evenly items-left sm:items-center sm:w-11/12 text-[2em] sm:text-[.9em]"
-      >
-        <i
-          id="close-menu"
-          class="hover:ease-in absolute top-12 text-slate-900 right-12 fa fa-close text-3xl sm:hidden text-orange-950"
-        ></i>
-        <li>
-          <a href="#" class="text-orange-950 hover:text-blue-500">Home</a>
-        </li>
-        <li>
-          <a href="#" class="text-orange-950 hover:text-blue-500">Places</a>
-        </li>
-        <!-- <li><a href="#" class="text-orange-950 hover:text-blue-500">Services</a></li> -->
-        <li>
-          <a href="#" class="text-orange-950 hover:text-blue-500">History</a>
-        </li>
-        <!-- <li><a href="#" class="text-orange-950 hover:text-blue-500">Famous Figure</a></li> -->
-        <!-- <li><a href="#" class="text-orange-950 hover:text-blue-500">Political</a></li> -->
-        <li>
-          <a href="#idaboutus" class="text-orange-950 hover:text-blue-500"
-            >About us</a
-          >
-        </li>
-      </ul>
-      <i class="fa fa-home text-[24px] sm:hidden"></i>
-      <i id="hamburger-menu" class="fa fa-bars text-[24px] sm:hidden"></i>
-    </nav>
+  <!-- Mobile nav overlay (click to close) -->
+  <div class="mobile-nav-overlay" id="nav-overlay" aria-hidden="true"></div>
 
-    <section>
-      <div
-        id="slider"
-        class="max-w-screen-xl mx-auto mt-8 sm:h-[80vh] relative overflow-hidden"
-      >
-        <div class="carousel-inner">
-          <div class="carousel-item">
-            <img
-              src="./assets/trustPhoto.jpg"
-              alt="Slide 1"
-              class="w-full h-auto"
-            />
-            <div
-              class="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 text-white text-2xl font-bold"
-            >
-              <!-- Slide 2 Text -->
-            </div>
-          </div>
+  <!-- ====== HERO / CAROUSEL ====== -->
+  <section class="hero" id="home" aria-label="मंदिर चित्र स्लाइडर">
+    <div class="carousel" id="carousel">
+      <div class="carousel-track" id="carousel-track">
 
-          <div class="carousel-item">
-            <img
-              src="./assets/mandircropped2.jpeg"
-              alt="Slide 1"
-              class="w-full h-auto"
-            />
-            <div
-              class="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 text-white text-2xl font-bold"
-            >
-              <!-- Slide 2 Text -->
-            </div>
-          </div>
-
-          <div class="carousel-item">
-            <img
-              src="./assets/sliderimg.jpeg"
-              alt="Slide 1"
-              class="w-full h-auto"
-            />
-            <div
-              class="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 text-white text-2xl font-bold"
-            >
-              <!-- Slide 1 Text -->
-            </div>
-          </div>
-          <div class="carousel-item">
-            <img
-              src="./assets/sliderimg2.jpeg"
-              alt="Slide 1"
-              class="w-full h-auto"
-            />
-            <div
-              class="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 text-white text-2xl font-bold"
-            >
-              <!-- Slide 2 Text -->
-            </div>
+        <!-- Slide 1 – eager loaded (above the fold) -->
+        <div class="carousel-slide">
+          <img
+            src="./assets/trustPhoto.webp"
+            alt="संकट मोचन मारुति ट्रस्ट – सामूहिक चित्र"
+            loading="eager"
+            width="1600"
+            height="900"
+          />
+          <div class="hero-overlay">
+            <h1 class="hero-title">संकट मोचन मारुति ट्रस्ट</h1>
+            <p class="hero-sub">विकैया धाम, चक श्री दत्त · उत्तर प्रदेश</p>
           </div>
         </div>
-        <button
-          id="prevBtn"
-          class="absolute top-1/2 left-4 transform -translate-y-1/2 text-white text-2xl font-bold cursor-pointer"
-        >
-          &#10094;
-        </button>
-        <button
-          id="nextBtn"
-          class="absolute top-1/2 right-4 transform -translate-y-1/2 text-white text-2xl font-bold cursor-pointer"
-        >
-          &#10095;
-        </button>
-      </div>
-    </section>
 
-    <section class="mt-4 h-min-content">
-      <div
-        class="flex flex-col bg-orange-300 min-h-[30vh] place-content-evenly sm:flex-row sm: mb-6"
-      >
-        <div class="w-full sm:w-2/5">
+        <!-- Slide 2 -->
+        <div class="carousel-slide">
           <img
-            class="h-full w-full image_shiv rounded shadow-lg mx-auto m-0 scale-150 border-radius-4"
-            src="./assets/Mandirsmall.jpeg"
-            alt=""
+            src="./assets/mandircropped2.webp"
+            alt="हनुमान मंदिर – विकैया धाम"
+            loading="lazy"
+            width="1600"
+            height="900"
           />
         </div>
-        <div class="w-full sm:w-2/5 flex items-center p-4">
-          <p class="italic font-light text-gray-800">
-            गाँव का मंदिर, जिसे 2 फरवरी 1996 को क्षेत्रवासियों ने निर्मित कर,
-            अद्भुत और अलौकिक मूर्ति की स्थापना के साथ उद्घाटन किया था, एक
-            अद्वितीय स्थान है। यहाँ हर वर्ष 2 फरवरी को श्री हनुमान जी का
-            जन्मोत्सव धूमधाम से मनाया जाता है। इस अद्वितीय अवसर पर, सभी
-            क्षेत्रवासी एकजुट होकर इसे एक त्योहार के रूप में बड़े ही हर्षोल्लास
-            और धूमधाम से मनाते हैं। प्रति वर्ष, क्षेत्रवासी अखंड श्रीराम चरित
-            मानस (रामायण) पाठ का आयोजन करते हैं। भव्य यज्ञ हवन होता है और इसके
-            पश्चात विशाल भंडारा आयोजित किया जाता है, जिसमें प्रसाद रूपी अमृत
-            बांटा जाता है। साथ ही जरूरतमंद लोगों के लिए विभिन्न प्रकार के वितरण
-            भी किए जाते हैं। इस मंदिर का उद्दीपन, छेत्र के सामाजिक और धार्मिक
-            जीवन को संजीवनी दे रहा है और हर वर्ग के लोगों को एक साथ लाने में सफल
-            और मार्गदर्शक सिद्ध हो रहा है। हम सभी गर्वित हैं कि हमारा मंदिर एक
-            ऐसा स्थान है जहां भक्ति, समृद्धि, और सामाजिकता का मिलन होता है। आप
-            सभी का हमारे मंदिर की वेबसाइट पर स्वागत है और हमें आशा है कि आप इस
-            धार्मिक यात्रा में हमारे साथ होंगे।
-            <br />
-            🚩जय श्री राम🚩
-          </p>
-        </div>
-      </div>
 
-      <div
-        class="flex flex-col-reverse sm:flex-row justify-evenly my-[15vh] h-[60vh] mt-[90vh] md:mt-0 p-3"
-      >
-        <div class="right w-full sm:w-2/5 flex items-center">
-          <p class="m-2 mt-8 italic font-light">
-            श्री शिव मंदिर, जो 25 फरवरी 2008 को उद्घाटित हुआ, क्षेत्रवासियों पर
-            अपनी कृपा की बौछार कर रहा है। यहाँ, भगवान शंकर और हनुमान जी अपनी
-            अमृतवर्षा से क्षेत्रवासियों को आशीर्वाद दे रहे हैं। इस पवित्र स्थल
-            पर आने वाले भक्तों को शांति, सुकून और ध्यान का अनुभव होता है। शिव
-            मंदिर न केवल धार्मिक महत्व का प्रतीक है, बल्कि यह क्षेत्र को समृद्धि
-            और सुरक्षा का आभास भी कराता है। क्षेत्र में यह महत्वपूर्ण स्थल है जो
-            भक्तों के लिए एक अद्वितीय आध्यात्मिक स्थल है। हनुमान जी और शिव जी के
-            आशीर्वाद से क्षेत्रवासियों को सुख, समृद्धि और आनंद का अनुभव होता है।
-            यहाँ, दोनों देवताओं की कृपा से क्षेत्र के लोग अपने जीवन को धार्मिकता
-            और समृद्धि से भरपूर महसूस करते हैं। हर साल 2 फरवरी को यहाँ
-            रुद्राभिषेक का आयोजन भी होता है, जिसमें भक्तजन बड़ी संख्या में शामिल
-            होते हैं। इस मंदिर में हर साल महाशिवरात्रि के दिन विशेष पूजा और
-            आराधना का आयोजन होता है। क्षेत्रवासी इस उत्सव को धूमधाम से मनाते हैं
-            और एक साथ मिलकर आराधना और सामूहिक प्रार्थना में भाग लेते हैं। आप सभी
-            का हमारे मंदिर में हार्दिक स्वागत है। आइए और इस धार्मिक यात्रा का
-            हिस्सा बनें, और भगवान शिव और हनुमान जी की कृपा का अनुभव करें।
-            <br />
-            🚩हर हर महादेव🚩
-          </p>
-        </div>
-
-        <div class="left w-full sm:w-2/5">
+        <!-- Slide 3 -->
+        <div class="carousel-slide">
           <img
-            class="h-full w-full rounded shadow-lg bg-center"
-            src="./assets/Shivmandircropped2.jpeg"
-            alt=""
+            src="./assets/sliderimg.webp"
+            alt="मंदिर परिसर"
+            loading="lazy"
+            width="1600"
+            height="900"
           />
         </div>
-      </div>
-    </section>
 
-    <!-- Add a separate file as member for member details -->
-    <div id="member-content"></div>
+        <!-- Slide 4 -->
+        <div class="carousel-slide">
+          <img
+            src="./assets/sliderimg2.webp"
+            alt="मंदिर उत्सव"
+            loading="lazy"
+            width="1600"
+            height="900"
+          />
+        </div>
 
-    <script>
-      fetch("members.html")
-        .then((response) => response.text())
-        .then((data) => {
-          document.getElementById("member-content").innerHTML = data;
-        })
-        .catch((error) =>
-          console.error("Error fetching the HTML file:", error)
-        );
-    </script>
+      </div><!-- /carousel-track -->
 
-    <section id="idaboutus">
-      <div
-        class="tourist-place flex flex-col justify-evenly h-[40vh] items-center p-5 min-content-height cssaboutus mt-[10vh] sm:mt-[5vh]"
-      >
-        <h3 class="text-xl italic text-center">About Us</h3>
+      <button class="carousel-btn prev" id="carousel-prev" aria-label="पिछला चित्र">
+        <svg viewBox="0 0 24 24" aria-hidden="true">
+          <polyline points="15 18 9 12 15 6"></polyline>
+        </svg>
+      </button>
+      <button class="carousel-btn next" id="carousel-next" aria-label="अगला चित्र">
+        <svg viewBox="0 0 24 24" aria-hidden="true">
+          <polyline points="9 18 15 12 9 6"></polyline>
+        </svg>
+      </button>
 
-        <p class="sm:w-[60vw] w-[80vw] text-center">
-          संकट मोचन मारुति ट्रस्ट एक सामाजिक संगठन है जिसे क्षेत्र के नागरिकों
-          द्वारा स्थापित किया गया है। इस संगठन का मुख्य उद्देश्य सामाजिक और
-          आर्थिक समृद्धि के लिए योजनाएं बनाना और समुदाय के हर व्यक्ति को
-          सकारात्मक परिणाम प्रदान करना है। हम संकट मोचन मारुति ट्रस्ट के सदस्यों
-          को इस सेवा में योगदान करने के लिए समर्पित और प्रेरित पाते हैं, जो समाज
-          के हर व्यक्ति की भलाई के लिए निरंतर कार्यरत हैं। आप सभी से निवेदन है
-          कि हमारी इस सामाजिक पहल का समर्थन करें और हमारे साथ मिलकर समाज में
-          सकारात्मक परिवर्तन लाने में योगदान दें। धन्यवाद।
-        </p>
-      </div>
-    </section>
+      <div class="carousel-dots" id="carousel-dots" aria-hidden="true"></div>
+    </div>
+  </section>
 
-    <div
-      class="flex flex-col bg-orange-300 min-h-[30vh] place-content-evenly sm:flex-row sm: mb-6"
-    >
-      <div class="w-full sm:w-2/5">
+  <!-- ====== TEMPLES SECTION ====== -->
+  <section class="temples-section" id="temples">
+
+    <!-- Hanuman Mandir -->
+    <div class="temple-block fade-up">
+      <div class="temple-img-wrap">
         <img
-          class="h-full w-full image_shiv rounded shadow-lg mx-auto m-0 scale-150 border-radius-4"
-          src="./assets/QRCode.png"
-          alt="QR_Code"
-          style="background-color: white"
+          src="./assets/Mandirsmall.webp"
+          alt="हनुमान मंदिर – विकैया धाम"
+          loading="lazy"
+          width="800"
+          height="600"
         />
       </div>
-      <div
-        class="right w-full sm:w-2/5 flex flex-col items-left p-4 justify-center"
-      >
-        <p class="text-2xl">
-          अच्छे कार्यों में सहभागी बनें। आपका सहयोग हमें इस संकल्प को पूरा करने
-          में मदद करेगा। धन्यवाद!
+      <div class="temple-text">
+        <span class="temple-badge">स्थापना: 2 फरवरी 1996</span>
+        <h2>🚩 हनुमान मंदिर</h2>
+        <p>
+          गाँव का मंदिर, जिसे 2 फरवरी 1996 को क्षेत्रवासियों ने निर्मित कर,
+          अद्भुत और अलौकिक मूर्ति की स्थापना के साथ उद्घाटन किया था, एक
+          अद्वितीय स्थान है। यहाँ हर वर्ष 2 फरवरी को श्री हनुमान जी का
+          जन्मोत्सव धूमधाम से मनाया जाता है।
+          <br /><br />
+          प्रति वर्ष क्षेत्रवासी अखंड श्रीराम चरित मानस पाठ का आयोजन करते हैं,
+          भव्य यज्ञ-हवन होता है और विशाल भंडारा आयोजित किया जाता है।
         </p>
-        <p class="text-lg mb-4">खाता विवरण:</p>
-        <ul class="text-md list-disc list-inside">
-          <li>खाता नाम: Sankat Mochan Maruti Trust</li>
-          <li>बैंक नाम: HDFC Bank</li>
-          <li>खाता संख्या: 50200086748529</li>
-          <li>आईएफएससी कोड: HDFC0002797</li>
-          <li>खाता प्रकार: चालू खाता (Current Account)</li>
-        </ul>
       </div>
     </div>
 
-    <!-- QR Code and Account Details -->
-    <!-- <section class="px-2 pt-4 mt-12">
-  <div class="flex flex-col sm:flex-row justify-evenly items-center py-4 h-[40vh] p-5 min-content-height cssaboutus mt-[10vh] sm:mt-[5vh]">
-    <h3 class="text-xl italic text-center">Scan and Pay</h3>
-    <div class="flex flex-col sm:flex-row justify-evenly items-center py-4">
-      <div class="left w-full sm:w-2/5 flex items-center rounded border h-full">
-        <div class="qr-code rounded">
-        </div>
+    <!-- Shiv Mandir -->
+    <div class="temple-block reverse fade-up">
+      <div class="temple-img-wrap">
+        <img
+          src="./assets/Shivmandircropped2.webp"
+          alt="शिव मंदिर – विकैया धाम"
+          loading="lazy"
+          width="800"
+          height="600"
+        />
       </div>
-      <div class="right w-full sm:w-2/5 flex flex-col items-left p-4">
-        <p class="text-lg mb-4">खाता विवरण:</p>
-        <ul class="text-md list-disc list-inside">
-          <li>खाता नाम: Sankat Mochan Maruti Trust</li>
-          <li>बैंक नाम:  HDFC Bank</li>
-          <li>खाता संख्या: 50200086748529</li>
-          <li>आईएफएससी कोड: HDFC0002797</li>
-          <li>खाता प्रकार: चालू खाता (Current Account)</li>
-        </ul>
+      <div class="temple-text">
+        <span class="temple-badge">स्थापना: 25 फरवरी 2008</span>
+        <h2>🔱 शिव मंदिर</h2>
+        <p>
+          श्री शिव मंदिर, जो 25 फरवरी 2008 को उद्घाटित हुआ, क्षेत्रवासियों पर
+          अपनी कृपा की बौछार कर रहा है। यहाँ भगवान शंकर और हनुमान जी अपनी
+          अमृतवर्षा से क्षेत्रवासियों को आशीर्वाद दे रहे हैं।
+          <br /><br />
+          हर साल 2 फरवरी को रुद्राभिषेक का आयोजन होता है और महाशिवरात्रि के
+          दिन विशेष पूजा-आराधना का कार्यक्रम होता है। 🚩 हर हर महादेव 🚩
+        </p>
       </div>
     </div>
-  </div>
-</section> -->
 
-    <!-- Connect Us -->
-    <section class="px-2 pt-10 mt-12">
-      <div
-        class="flex flex-col sm:flex-row justify-evenly items-center py-4 h-[70vh] p-4 mt-[20vh]"
-      >
-        <div
-          class="right w-full sm:w-2/5 flex items-center rounded border h-full"
-        >
-          <div class="mapouter rounded">
-            <div class="gmap_canvas">
-              <iframe
-                width="100%"
-                height="100%"
-                id="gmap_canvas"
-                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3600.9470176906046!2d82.446684!3d25.349835!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x398fe441f41615d1%3A0xf5243b1f9f46ab61!2sVikaiya%20Dham%20Hanuman%20Mandir%20Chak%20Shri%20datt!5e0!3m2!1sen!2sin!4v1646887226287!5m2!1sen!2sin=&output=embed"
-                frameborder="0"
-                scrolling="no"
-                marginheight="0"
-                marginwidth="0"
-              ></iframe>
-              <br />
-              <style>
-                .mapouter {
-                  position: relative;
-                  text-align: right;
-                  height: 100%;
-                  width: 100%;
-                }
-              </style>
-              <style>
-                .gmap_canvas {
-                  overflow: hidden;
-                  background: none !important;
-                  height: 100%;
-                  width: 100%;
-                }
-              </style>
-            </div>
-          </div>
-        </div>
+  </section>
 
-        <div class="right w-full sm:w-2/5 flex flex-col items-left p-4">
-          <h2 class="text-2xl font-bold mb-6">सम्पर्क करें</h2>
-          <form
-            action="https://formsubmit.co/sankatmochanmarutitrust@gmail.com"
-            method="POST"
-            class="space-y-4"
-            netlify
-          >
-            <div>
-              <label for="name" class="block text-sm font-medium text-gray-600"
-                >नाम:</label
-              >
-              <input
-                type="text"
-                id="name"
-                name="name"
-                required
-                class="mt-1 p-2 w-full border rounded-md"
-              />
-            </div>
-
-            <div>
-              <label
-                for="mobile"
-                class="block text-sm font-medium text-gray-600"
-                >मोबाइल नंबर:</label
-              >
-              <input
-                type="tel"
-                id="mobile"
-                name="mobile"
-                required
-                class="mt-1 p-2 w-full border rounded-md"
-              />
-            </div>
-
-            <div>
-              <label
-                for="message"
-                class="block text-sm font-medium text-gray-600"
-                >संदेश:</label
-              >
-              <textarea
-                id="message"
-                name="message"
-                rows="4"
-                required
-                class="mt-1 p-2 w-full border rounded-md"
-              ></textarea>
-            </div>
-
-            <button
-              type="submit"
-              class="bg-blue-500 text-white p-2 rounded-md hover:bg-blue-600"
-            >
-              सबमिट करें
-            </button>
-          </form>
-        </div>
-      </div>
-    </section>
-
-    <footer
-      class="cssaboutus text-white p-8 h-min-content text-orange-950 mt-[10vh]"
-    >
-      <h1 class="text-2xl sm:text-3xl text-center font-light text-orange-950">
-        This Website is Developed By
-      </h1>
-      <!-- <div class="container mx-auto flex w-1/2 sm:flex-row items-center justify-between"> -->
-      <!-- Developer Information -->
-
-      <div
-        class="flex justify-evenly mt-2 items-center text-orange-950 flex flex-col sm:flex-row"
-      >
-        <div
-          class="cursor-pointer rounded w-full sm:w-[20vw] p-3 flex flex-col justify-evenly my-4"
-        >
-          <div class="flex items-center justify-center mb-3">
-            <img
-              class="h-40 w-40 object-cover rounded-full overflow-hidden shadow-lg border-orange-500"
-              src="./assets/ashu.jpeg"
-              alt=""
-            />
-          </div>
-          <h3 class="text-xl italic text-center">Ashutosh Tiwari</h3>
-          <p class="prose text-center">
-            <!-- Software Developer -->
-          </p>
-
-          <div class="flex justify-center space-x-4 mt-4">
-            <!-- Instagram -->
-            <a
-              href="https://www.instagram.com/i_m__aashu"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              <i class="fab fa-instagram text-3xl"></i>
-            </a>
-            <!-- Facebook -->
-            <a
-              href="https://www.facebook.com/your_facebook_handle"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              <i class="fab fa-facebook text-3xl"></i>
-            </a>
-            <!-- Add more social media icons as needed -->
-          </div>
-        </div>
-
-        <div
-          class="cursor-pointer rounded w-full sm:w-[20vw] p-3 flex flex-col justify-evenly my-4"
-        >
-          <div class="flex items-center justify-center mb-3">
-            <img
-              class="h-40 w-40 object-cover rounded-full overflow-hidden shadow-lg border-orange-500"
-              src="./assets/Hariom.png"
-              alt=""
-            />
-          </div>
-          <h3 class="text-xl italic text-center">Hari om jee</h3>
-          <p class="prose text-center">
-            <!-- Software Developer -->
-          </p>
-
-          <div class="flex justify-center space-x-4 mt-4">
-            <!-- Instagram -->
-            <a
-              href="https://www.instagram.com/de_hariom"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              <i class="fab fa-instagram text-3xl"></i>
-            </a>
-            <!-- Facebook -->
-            <!-- <a href="https://www.facebook.com/your_facebook_handle" target="_blank" rel="noopener noreferrer">
-            <i class="fab fa-facebook text-3xl"></i>
-          </a> -->
-            <!-- Add more social media icons as needed -->
-          </div>
-        </div>
-
-        <!-- </div> -->
-
-        <div class="mt-4 sm:mt-0 w-1/1 text-1xl sm:w-1/2">
-          <h1 class="text-4xl styled-text">
-            BCTech: Your IT Solutions Partner
-          </h1>
-          <p class="font-light my-4">
-            Your technology growth partner. We innovate with excellence,
-            delivering bespoke solutions in software, web design, cybersecurity,
-            and the cloud. Our skilled team ensures efficiency, user
-            experiences, and digital security, propelling businesses forward.
-            Our team of skilled professionals brings a diverse range of
-            expertise, enabling us to deliver tailor-made solutions that cater
-            to your unique needs. Transform with us.
-          </p>
-        </div>
-      </div>
-    </footer>
-    <!-- <div class="message bg-orange-200 p-3 border border-gray-300 shadow-lg w-full text-center"> -->
-    <p class="text-gray-800 message bg-orange-200 p-3 border border-gray-300 shadow-lg w-full text-center">
-      यदि किसी को हमारी वेबसाइट पर व्यक्तिगत फोटो या सामग्री के संबंध में कोई
-      समस्या हो, तो कृपया हमें ईमेल के माध्यम से सूचित करें। हम श्रेय देने या
-      सामग्री हटाने में आपकी सहायता करेंगे।
+  <!-- ====== 360° TOUR SECTION ====== -->
+  <section class="tour-section fade-up" id="tour">
+    <div class="container">
+      <h2 class="section-title">360° मंदिर भ्रमण</h2>
+      <p class="section-sub">वर्चुअल दर्शन करें – खींचें, घुमाएं, महसूस करें</p>
+    </div>
+    <div class="tour-scene-wrap" id="tourSceneWrap">
+      <canvas id="tour-canvas"></canvas>
+      <!-- Overlays injected by 360embed.js -->
+    </div>
+    <p class="tour-video-notice">
+      ⚠️ यदि इस वीडियो में आपकी उपस्थिति है और आप इसे हटवाना चाहते हैं, तो कृपया हमसे संपर्क करें —
+      <a href="mailto:liveat777@gmail.com">liveat777@gmail.com</a>
     </p>
-    <!-- </div> -->
-    <div class="fixed bottom-10 right-10 bg-gray-800 text-white px-4 py-2 rounded-lg text-sm">
-      <!-- <span id="visitCount">Loading...</span> -->
+  </section>
+
+  <!-- ====== MEMBERS SECTION (inlined from members.html) ====== -->
+  <section class="members-section" id="members">
+    <h2 class="section-title fade-up">ट्रस्ट के सदस्य</h2>
+    <p class="section-subtitle fade-up">Trust Members</p>
+
+    <div class="filter-bar fade-up">
+      <button class="filter-btn active" data-filter="all">सभी</button>
+      <button class="filter-btn" data-filter="प्रबंधक">प्रबंधक</button>
+      <button class="filter-btn" data-filter="अध्यक्ष">अध्यक्ष</button>
+      <button class="filter-btn" data-filter="उपाध्यक्ष">उपाध्यक्ष</button>
+      <button class="filter-btn" data-filter="कोषाध्यक्ष">कोषाध्यक्ष</button>
+      <button class="filter-btn" data-filter="संयोजक">संयोजक</button>
+      <button class="filter-btn" data-filter="सलाहकार">सलाहकार</button>
+      <button class="filter-btn" data-filter="संरक्षक">संरक्षक</button>
+      <button class="filter-btn" data-filter="सदस्य">सदस्य</button>
     </div>
-    <footer class="bg-gray-900 text-white py-4">
-      <div class="container mx-auto text-center">
-        <p class="text-sm">
-          Contact Us:
-          <a
-            href="mailto:sankatmochanmarutitrust@gmail.com"
-            class="text-blue-400"
-            >sankatmochanmarutitrust@gmail.com</a
-          >
+
+    <div class="members-grid" id="members-grid">
+
+      <!-- प्रबंधक -->
+      <div class="member-card animate-member" data-role="प्रबंधक">
+        <div class="member-avatar">
+          <img src="./assets/Baba11.png" alt="श्री हरिप्रसाद तिवारी" loading="lazy" width="96" height="96" />
+        </div>
+        <span class="role-badge">प्रबंधक</span>
+        <p class="member-name">श्री हरिप्रसाद तिवारी<br><small>(राम अकबाल तिवारी)</small></p>
+      </div>
+
+      <!-- सह प्रबंधक -->
+      <div class="member-card animate-member" data-role="प्रबंधक">
+        <div class="member-avatar">
+          <img src="./assets/Rajesh.webp" alt="राजेश तिवारी" loading="lazy" width="96" height="96" />
+        </div>
+        <span class="role-badge">सह प्रबंधक</span>
+        <p class="member-name">राजेश तिवारी</p>
+      </div>
+
+      <!-- अध्यक्ष -->
+      <div class="member-card animate-member" data-role="अध्यक्ष">
+        <div class="member-avatar">
+          <img src="./assets/Babulallan.webp" alt="सुरेश तिवारी" loading="lazy" width="96" height="96" />
+        </div>
+        <span class="role-badge">अध्यक्ष</span>
+        <p class="member-name">सुरेश तिवारी<br><small>(बाबूलल्लन)</small></p>
+      </div>
+
+      <!-- कोषाध्यक्ष -->
+      <div class="member-card animate-member" data-role="कोषाध्यक्ष">
+        <div class="member-avatar">
+          <img src="./assets/atultiwari.webp" alt="अतुल तिवारी" loading="lazy" width="96" height="96" />
+        </div>
+        <span class="role-badge">कोषाध्यक्ष</span>
+        <p class="member-name">अतुल तिवारी</p>
+      </div>
+
+      <!-- सह कोषाध्यक्ष -->
+      <div class="member-card animate-member" data-role="कोषाध्यक्ष">
+        <div class="member-avatar">
+          <img src="./assets/Dheeraj.webp" alt="धीरज तिवारी" loading="lazy" width="96" height="96" />
+        </div>
+        <span class="role-badge">सह कोषाध्यक्ष</span>
+        <p class="member-name">धीरज तिवारी</p>
+      </div>
+
+      <!-- उपाध्यक्ष × 3 -->
+      <div class="member-card animate-member" data-role="उपाध्यक्ष">
+        <div class="member-avatar">
+          <img src="./assets/Suniltiwari.webp" alt="सुनील तिवारी" loading="lazy" width="96" height="96" />
+        </div>
+        <span class="role-badge">उपाध्यक्ष</span>
+        <p class="member-name">सुनील तिवारी</p>
+      </div>
+
+      <div class="member-card animate-member" data-role="उपाध्यक्ष">
+        <div class="member-avatar">
+          <img src="./assets/PradeepTiwari.png" alt="प्रदीप तिवारी" loading="lazy" width="96" height="96" />
+        </div>
+        <span class="role-badge">उपाध्यक्ष</span>
+        <p class="member-name">प्रदीप तिवारी</p>
+      </div>
+
+      <div class="member-card animate-member" data-role="उपाध्यक्ष">
+        <div class="member-avatar">
+          <img src="./assets/AshishTiwari.png" alt="आशीष तिवारी" loading="lazy" width="96" height="96" />
+        </div>
+        <span class="role-badge">उपाध्यक्ष</span>
+        <p class="member-name">आशीष तिवारी</p>
+      </div>
+
+      <!-- संयोजक -->
+      <div class="member-card animate-member" data-role="संयोजक">
+        <div class="member-avatar">
+          <img src="./assets/Surendra.webp" alt="सुरेंद्र कुमार त्रिपाठी" loading="lazy" width="96" height="96" />
+        </div>
+        <span class="role-badge">संयोजक</span>
+        <p class="member-name">सुरेंद्र कुमार त्रिपाठी</p>
+      </div>
+
+      <!-- सह संयोजक -->
+      <div class="member-card animate-member" data-role="संयोजक">
+        <div class="member-avatar">
+          <img src="./assets/Raviprakash.png" alt="रविप्रकाश तिवारी" loading="lazy" width="96" height="96" />
+        </div>
+        <span class="role-badge">सह संयोजक</span>
+        <p class="member-name">रविप्रकाश तिवारी</p>
+      </div>
+
+      <!-- सलाहकार × 5 -->
+      <div class="member-card animate-member" data-role="सलाहकार">
+        <div class="member-avatar">
+          <img src="./assets/shrichandra.png" alt="श्री चन्द्र तिवारी" loading="lazy" width="96" height="96" />
+        </div>
+        <span class="role-badge">सलाहकार</span>
+        <p class="member-name">श्री चन्द्र तिवारी</p>
+      </div>
+
+      <div class="member-card animate-member" data-role="सलाहकार">
+        <div class="member-avatar">
+          <img src="./assets/suryabalitiwari.png" alt="श्री सूर्यबली तिवारी" loading="lazy" width="96" height="96" />
+        </div>
+        <span class="role-badge">सलाहकार</span>
+        <p class="member-name">श्री सूर्यबली तिवारी<br><small>(सोपाड़ी)</small></p>
+      </div>
+
+      <div class="member-card animate-member" data-role="सलाहकार">
+        <div class="member-avatar">
+          <img src="./assets/dummy.jpg" alt="श्री रमाकान्त तिवारी" loading="lazy" width="96" height="96" />
+        </div>
+        <span class="role-badge">सलाहकार</span>
+        <p class="member-name">श्री रमाकान्त तिवारी</p>
+      </div>
+
+      <div class="member-card animate-member" data-role="सलाहकार">
+        <div class="member-avatar">
+          <img src="./assets/dummy.jpg" alt="श्री देवीशंकर तिवारी" loading="lazy" width="96" height="96" />
+        </div>
+        <span class="role-badge">सलाहकार</span>
+        <p class="member-name">श्री देवीशंकर तिवारी</p>
+      </div>
+
+      <div class="member-card animate-member" data-role="सलाहकार">
+        <div class="member-avatar">
+          <img src="./assets/lallan.png" alt="श्री राकेश तिवारी" loading="lazy" width="96" height="96" />
+        </div>
+        <span class="role-badge">सलाहकार</span>
+        <p class="member-name">श्री राकेश तिवारी<br><small>(लल्लन)</small></p>
+      </div>
+
+      <!-- संरक्षक × 5 -->
+      <div class="member-card animate-member" data-role="संरक्षक">
+        <div class="member-avatar">
+          <img src="./assets/ManmohanTiwari.png" alt="महेंद्र कुमार तिवारी" loading="lazy" width="96" height="96" />
+        </div>
+        <span class="role-badge">संरक्षक</span>
+        <p class="member-name">महेंद्र कुमार तिवारी<br><small>(मनमोहन)</small></p>
+      </div>
+
+      <div class="member-card animate-member" data-role="संरक्षक">
+        <div class="member-avatar">
+          <img src="./assets/Anil Tiwari (1).png" alt="अनिल तिवारी" loading="lazy" width="96" height="96" />
+        </div>
+        <span class="role-badge">संरक्षक</span>
+        <p class="member-name">अनिल तिवारी</p>
+      </div>
+
+      <div class="member-card animate-member" data-role="संरक्षक">
+        <div class="member-avatar">
+          <img src="./assets/kullur.png" alt="रमेश तिवारी" loading="lazy" width="96" height="96" />
+        </div>
+        <span class="role-badge">संरक्षक</span>
+        <p class="member-name">रमेश तिवारी<br><small>(कुल्लूर)</small></p>
+      </div>
+
+      <div class="member-card animate-member" data-role="संरक्षक">
+        <div class="member-avatar">
+          <img src="./assets/arvindtiwari.png" alt="अरविन्द तिवारी" loading="lazy" width="96" height="96" />
+        </div>
+        <span class="role-badge">संरक्षक</span>
+        <p class="member-name">अरविन्द तिवारी<br><small>(बाबा)</small></p>
+      </div>
+
+      <div class="member-card animate-member" data-role="संरक्षक">
+        <div class="member-avatar">
+          <img src="./assets/uma.png" alt="उमा शंकर तिवारी" loading="lazy" width="96" height="96" />
+        </div>
+        <span class="role-badge">संरक्षक</span>
+        <p class="member-name">उमा शंकर तिवारी</p>
+      </div>
+
+      <!-- सोशल मीडिया प्रभारी × 3 -->
+      <div class="member-card animate-member" data-role="सदस्य">
+        <div class="member-avatar">
+          <img src="./assets/Bipin.webp" alt="बिपिन तिवारी" loading="lazy" width="96" height="96" />
+        </div>
+        <span class="role-badge">सोशल मीडिया</span>
+        <p class="member-name">बिपिन तिवारी</p>
+      </div>
+
+      <div class="member-card animate-member" data-role="सदस्य">
+        <div class="member-avatar">
+          <img src="./assets/amittiwari.png" alt="अमित तिवारी" loading="lazy" width="96" height="96" />
+        </div>
+        <span class="role-badge">सोशल मीडिया</span>
+        <p class="member-name">अमित तिवारी</p>
+      </div>
+
+      <div class="member-card animate-member" data-role="सदस्य">
+        <div class="member-avatar">
+          <img src="./assets/sudhirtiwari.png" alt="सुधीर तिवारी" loading="lazy" width="96" height="96" />
+        </div>
+        <span class="role-badge">सोशल मीडिया</span>
+        <p class="member-name">सुधीर तिवारी</p>
+      </div>
+
+      <!-- न्यायिक -->
+      <div class="member-card animate-member" data-role="सदस्य">
+        <div class="member-avatar">
+          <img src="./assets/Nankau.png" alt="सूरज तिवारी" loading="lazy" width="96" height="96" />
+        </div>
+        <span class="role-badge">न्यायिक सहयोग</span>
+        <p class="member-name">सूरज तिवारी</p>
+      </div>
+
+      <!-- सक्रिय सदस्य × 3 -->
+      <div class="member-card animate-member" data-role="सदस्य">
+        <div class="member-avatar">
+          <img src="./assets/SurendraShingh.webp" alt="लाल प्रताप सिंह" loading="lazy" width="96" height="96" />
+        </div>
+        <span class="role-badge">सक्रिय सदस्य</span>
+        <p class="member-name">लाल प्रताप सिंह</p>
+      </div>
+
+      <div class="member-card animate-member" data-role="सदस्य">
+        <div class="member-avatar">
+          <img src="./assets/pradeepTiwari2.png" alt="प्रदीप तिवारी" loading="lazy" width="96" height="96" />
+        </div>
+        <span class="role-badge">सक्रिय सदस्य</span>
+        <p class="member-name">प्रदीप तिवारी</p>
+      </div>
+
+      <div class="member-card animate-member" data-role="सदस्य">
+        <div class="member-avatar">
+          <img src="./assets/babbu.png" alt="कमलेश तिवारी" loading="lazy" width="96" height="96" />
+        </div>
+        <span class="role-badge">सक्रिय सदस्य</span>
+        <p class="member-name">कमलेश तिवारी</p>
+      </div>
+
+      <!-- सदस्य × 14 -->
+      <div class="member-card animate-member" data-role="सदस्य">
+        <div class="member-avatar">
+          <img src="./assets/dummy.jpg" alt="सुरेश चंद्र पाण्डेय" loading="lazy" width="96" height="96" />
+        </div>
+        <span class="role-badge">सदस्य</span>
+        <p class="member-name">सुरेश चंद्र पाण्डेय<br><small>(मुनीब)</small></p>
+      </div>
+
+      <div class="member-card animate-member" data-role="सदस्य">
+        <div class="member-avatar">
+          <img src="./assets/ManojShukla.png" alt="मनोज कुमार शुक्ला" loading="lazy" width="96" height="96" />
+        </div>
+        <span class="role-badge">सदस्य</span>
+        <p class="member-name">मनोज कुमार शुक्ला<br><small>(चाणक्य)</small></p>
+      </div>
+
+      <div class="member-card animate-member" data-role="सदस्य">
+        <div class="member-avatar">
+          <img src="./assets/dummy.jpg" alt="पवन कुमार शुक्ला" loading="lazy" width="96" height="96" />
+        </div>
+        <span class="role-badge">सदस्य</span>
+        <p class="member-name">पवन कुमार शुक्ला</p>
+      </div>
+
+      <div class="member-card animate-member" data-role="सदस्य">
+        <div class="member-avatar">
+          <img src="./assets/PrakashTiwari.webp" alt="प्रकाश तिवारी" loading="lazy" width="96" height="96" />
+        </div>
+        <span class="role-badge">सदस्य</span>
+        <p class="member-name">प्रकाश तिवारी</p>
+      </div>
+
+      <div class="member-card animate-member" data-role="सदस्य">
+        <div class="member-avatar">
+          <img src="./assets/dummy.jpg" alt="श्रीमती शिवकुमारी गुप्ता" loading="lazy" width="96" height="96" />
+        </div>
+        <span class="role-badge">सदस्य</span>
+        <p class="member-name">श्रीमती शिवकुमारी गुप्ता</p>
+      </div>
+
+      <div class="member-card animate-member" data-role="सदस्य">
+        <div class="member-avatar">
+          <img src="./assets/lara.png" alt="पंकज कुमार तिवारी" loading="lazy" width="96" height="96" />
+        </div>
+        <span class="role-badge">सदस्य</span>
+        <p class="member-name">पंकज कुमार तिवारी</p>
+      </div>
+
+      <div class="member-card animate-member" data-role="सदस्य">
+        <div class="member-avatar">
+          <img src="./assets/indraJeet_singh.png" alt="इंद्रजीत सिंह" loading="lazy" width="96" height="96" />
+        </div>
+        <span class="role-badge">सदस्य</span>
+        <p class="member-name">इंद्रजीत सिंह</p>
+      </div>
+
+      <div class="member-card animate-member" data-role="सदस्य">
+        <div class="member-avatar">
+          <img src="./assets/fulgen.png" alt="फुलगेन सेठ" loading="lazy" width="96" height="96" />
+        </div>
+        <span class="role-badge">सदस्य</span>
+        <p class="member-name">फुलगेन सेठ</p>
+      </div>
+
+      <div class="member-card animate-member" data-role="सदस्य">
+        <div class="member-avatar">
+          <img src="./assets/ralhi.png" alt="दिनेश चंद्र मिश्रा" loading="lazy" width="96" height="96" />
+        </div>
+        <span class="role-badge">सदस्य</span>
+        <p class="member-name">दिनेश चंद्र मिश्रा</p>
+      </div>
+
+      <div class="member-card animate-member" data-role="सदस्य">
+        <div class="member-avatar">
+          <img src="./assets/lalu.png" alt="मनोज तिवारी" loading="lazy" width="96" height="96" />
+        </div>
+        <span class="role-badge">सदस्य</span>
+        <p class="member-name">मनोज तिवारी</p>
+      </div>
+
+      <div class="member-card animate-member" data-role="सदस्य">
+        <div class="member-avatar">
+          <img src="./assets/gorelal.png" alt="सुनील तिवारी" loading="lazy" width="96" height="96" />
+        </div>
+        <span class="role-badge">सदस्य</span>
+        <p class="member-name">सुनील तिवारी</p>
+      </div>
+
+      <div class="member-card animate-member" data-role="सदस्य">
+        <div class="member-avatar">
+          <img src="./assets/udayRaj.png" alt="उदयराज सिंह" loading="lazy" width="96" height="96" />
+        </div>
+        <span class="role-badge">सदस्य</span>
+        <p class="member-name">उदयराज सिंह</p>
+      </div>
+
+      <div class="member-card animate-member" data-role="सदस्य">
+        <div class="member-avatar">
+          <img src="./assets/ramjanm.png" alt="रामजन्म सिंह" loading="lazy" width="96" height="96" />
+        </div>
+        <span class="role-badge">सदस्य</span>
+        <p class="member-name">रामजन्म सिंह</p>
+      </div>
+
+      <div class="member-card animate-member" data-role="सदस्य">
+        <div class="member-avatar">
+          <img src="./assets/deepak.png" alt="दीपक शुक्ला" loading="lazy" width="96" height="96" />
+        </div>
+        <span class="role-badge">सदस्य</span>
+        <p class="member-name">दीपक शुक्ला</p>
+      </div>
+
+      <!-- प्रेरक -->
+      <div class="member-card animate-member" data-role="सदस्य">
+        <div class="member-avatar">
+          <img src="./assets/anandTiwari.png" alt="आनंद तिवारी" loading="lazy" width="96" height="96" />
+        </div>
+        <span class="role-badge">प्रेरक</span>
+        <p class="member-name">आनंद तिवारी</p>
+      </div>
+
+    </div><!-- /members-grid -->
+  </section>
+
+  <!-- ====== ABOUT US ====== -->
+  <section class="about-section" id="about">
+    <h2 class="section-title fade-up">हमारे बारे में</h2>
+    <p class="section-subtitle fade-up">About Us</p>
+    <div class="about-card fade-up">
+      संकट मोचन मारुति ट्रस्ट एक सामाजिक संगठन है जिसे क्षेत्र के नागरिकों
+      द्वारा स्थापित किया गया है। इस संगठन का मुख्य उद्देश्य सामाजिक और
+      आर्थिक समृद्धि के लिए योजनाएं बनाना और समुदाय के हर व्यक्ति को
+      सकारात्मक परिणाम प्रदान करना है।
+      <br /><br />
+      हम संकट मोचन मारुति ट्रस्ट के सदस्यों को इस सेवा में योगदान करने के
+      लिए समर्पित और प्रेरित पाते हैं, जो समाज के हर व्यक्ति की भलाई के लिए
+      निरंतर कार्यरत हैं। आप सभी से निवेदन है कि हमारी इस सामाजिक पहल का
+      समर्थन करें। धन्यवाद।
+    </div>
+  </section>
+
+  <!-- ====== DONATE SECTION ====== -->
+  <section class="donate-section" id="donate">
+    <h2 class="section-title fade-up">दान करें</h2>
+    <p class="section-subtitle fade-up" style="color:rgba(255,255,255,0.7)">Scan &amp; Pay / Bank Transfer</p>
+
+    <div class="donate-card fade-up">
+      <div class="qr-wrap">
+        <img
+          src="./assets/QRCode.png"
+          alt="UPI QR Code – संकट मोचन मारुति ट्रस्ट"
+          loading="lazy"
+          width="180"
+          height="180"
+        />
+      </div>
+      <div class="donate-details">
+        <h3>अच्छे कार्यों में सहभागी बनें</h3>
+        <p>आपका सहयोग हमें इस संकल्प को पूरा करने में मदद करेगा। धन्यवाद!</p>
+        <ul class="bank-list">
+          <li><strong>खाता नाम:</strong> Sankat Mochan Maruti Trust</li>
+          <li><strong>बैंक:</strong> HDFC Bank</li>
+          <li><strong>खाता संख्या:</strong> 50200086748529</li>
+          <li><strong>IFSC:</strong> HDFC0002797</li>
+          <li><strong>खाता प्रकार:</strong> चालू खाता</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <!-- ====== CONTACT SECTION ====== -->
+  <section class="contact-section" id="contact">
+    <h2 class="section-title fade-up">सम्पर्क करें</h2>
+    <p class="section-subtitle fade-up">Contact Us</p>
+
+    <div class="contact-inner">
+      <!-- Map -->
+      <div class="map-wrap fade-up">
+        <iframe
+          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3600.9470176906046!2d82.446684!3d25.349835!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x398fe441f41615d1%3A0xf5243b1f9f46ab61!2sVikaiya%20Dham%20Hanuman%20Mandir%20Chak%20Shri%20datt!5e0!3m2!1sen!2sin!4v1646887226287!5m2!1sen!2sin=&output=embed"
+          title="विकैया धाम स्थान – Google Maps"
+          loading="lazy"
+          allowfullscreen
+          referrerpolicy="no-referrer-when-downgrade"
+        ></iframe>
+      </div>
+
+      <!-- Form -->
+      <div class="contact-form-wrap fade-up">
+        <h3>संदेश भेजें</h3>
+        <form
+          action="https://formsubmit.co/sankatmochanmarutitrust@gmail.com"
+          method="POST"
+        >
+          <!-- Honeypot -->
+          <input type="text" name="_honey" style="display:none" />
+          <!-- Disable captcha -->
+          <input type="hidden" name="_captcha" value="false" />
+
+          <div class="form-group">
+            <label for="name">नाम</label>
+            <input type="text" id="name" name="name" required autocomplete="name" />
+          </div>
+
+          <div class="form-group">
+            <label for="mobile">मोबाइल नंबर</label>
+            <input type="tel" id="mobile" name="mobile" required autocomplete="tel" />
+          </div>
+
+          <div class="form-group">
+            <label for="message">संदेश</label>
+            <textarea id="message" name="message" rows="4" required></textarea>
+          </div>
+
+          <button type="submit" class="btn-submit">सबमिट करें →</button>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <!-- ====== DEVELOPER FOOTER ====== -->
+  <footer class="dev-footer">
+    <h2>This Website is Developed By</h2>
+    <div class="dev-cards">
+      <div class="dev-card">
+        <img src="./assets/ashu.webp" alt="Ashutosh Tiwari" loading="lazy" width="80" height="80" />
+        <h3>Ashutosh Tiwari</h3>
+        <div class="social-links">
+          <a href="https://www.instagram.com/i_m__aashu" target="_blank" rel="noopener noreferrer" aria-label="Instagram">
+            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg>
+          </a>
+          <a href="https://www.facebook.com/your_facebook_handle" target="_blank" rel="noopener noreferrer" aria-label="Facebook">
+            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/></svg>
+          </a>
+        </div>
+      </div>
+
+      <div class="dev-card">
+        <img src="./assets/Hariom.png" alt="Hari Om Jee" loading="lazy" width="80" height="80" />
+        <h3>Hari Om Jee</h3>
+        <div class="social-links">
+          <a href="https://www.instagram.com/de_hariom" target="_blank" rel="noopener noreferrer" aria-label="Instagram">
+            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg>
+          </a>
+        </div>
+      </div>
+
+      <div class="bctech-blurb">
+        <h3>BCTech: Your IT Solutions Partner</h3>
+        <p>
+          Your technology growth partner. We innovate with excellence,
+          delivering bespoke solutions in software, web design, cybersecurity,
+          and the cloud — propelling businesses forward.
         </p>
       </div>
-      <div class="container mx-auto flex justify-between text-sm">
-        <p class="mb-2">&copy; 2025 Vikaiya Dham. All rights reserved.</p>
-        <p class="mb-2">Last Updated On : 23-03-2025 | Visitor Counter : <span id="visitorCount">0</span></p>
-      </div>
-    </footer>
+    </div>
+  </footer>
 
-    <script src="./script.js"></script>
-  </body>
+  <!-- Notice bar -->
+  <div class="notice-bar">
+    यदि किसी को हमारी वेबसाइट पर व्यक्तिगत फोटो या सामग्री के संबंध में कोई समस्या हो,
+    तो कृपया हमें ईमेल के माध्यम से सूचित करें। हम श्रेय देने या सामग्री हटाने में आपकी सहायता करेंगे।
+  </div>
+
+  <!-- Main footer -->
+  <footer class="main-footer">
+    <div class="footer-inner">
+      <p>
+        Contact:
+        <a href="mailto:sankatmochanmarutitrust@gmail.com">
+          sankatmochanmarutitrust@gmail.com
+        </a>
+      </p>
+      <p>&copy; 2025 Vikaiya Dham. All rights reserved.</p>
+      <p>Last Updated: 23-03-2025</p>
+    </div>
+  </footer>
+
+  <script src="./script.js" defer></script>
+  <!-- Three.js (r128) – required by 360embed.js -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+  <script src="./360embed.js" defer></script>
+</body>
 </html>
